@@ -76,7 +76,6 @@ public class PacketManager {
 			
 			if (isUsingAutoCon) {
 				isUsingAutoCon = false;
-				fromJostun(event, "Do you like my auto realm joining? :)");
 			}
 			
 			HelloPacket mpk = (HelloPacket) event.getPacket();
@@ -265,18 +264,5 @@ public class PacketManager {
 		notificationPacket.text = text;
 		event.sendToClient(notificationPacket);
 	}
-	
-	//LOL THIS IS SOME GAY SHIET
-	public static void fromJostun(final PacketScriptEvent event, String text) throws IOException {
-		TextPacket notificationPacket = new TextPacket();
-		notificationPacket.bubbleTime = -1;
-		notificationPacket.cleanText = "";
-		notificationPacket.name = "Jostun";
-		notificationPacket.numStars = 61;
-		notificationPacket.objectId = -1;
-		notificationPacket.recipient = "*GUILD*";
-		notificationPacket.text = text;
-		event.sendToClient(notificationPacket);
-	}
-	
+
 }
