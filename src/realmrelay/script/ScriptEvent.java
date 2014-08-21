@@ -138,7 +138,7 @@ public class ScriptEvent {
 	
 	public GroundData findGround(Object searchterm) {
 		if (searchterm instanceof Number) {
-			int type = (int)((double) searchterm);
+			final Integer type = (Integer) searchterm;
 			return GETXmlParse.tileMap2.get(type);
 		}
 		return GETXmlParse.tileMap.get(searchterm.toString().toUpperCase());
@@ -146,7 +146,7 @@ public class ScriptEvent {
 	
 	public ItemData findItem(Object searchterm) {
 		if (searchterm instanceof Number) {
-			int type = (int)((double) searchterm);
+			final Integer type = (Integer) searchterm;
 			return GETXmlParse.itemMap2.get(type);
 		}
 		return GETXmlParse.itemMap.get(searchterm.toString().toUpperCase());
@@ -154,7 +154,7 @@ public class ScriptEvent {
 	
 	public ObjectData findObject(Object searchterm) {
 		if (searchterm instanceof Number) {
-			int type = (int)((double) searchterm);
+			final Integer type = (Integer) searchterm;
 			return GETXmlParse.objectMap2.get(type);
 		}
 		return GETXmlParse.objectMap.get(searchterm.toString().toUpperCase());
