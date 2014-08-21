@@ -62,8 +62,9 @@ public class PacketManager {
 				
 				UsePortalPacket upk = (UsePortalPacket) packet;
 				System.out.println(upk.objectId);
-				
-				if (portals.get(upk.objectId).population < maxPopulation) { //TESTING
+
+                final PortalData portalData = portals.get(upk.objectId);
+                if (portalData != null && portalData.population < maxPopulation) { //TESTING
 					event.cancel();
 					tellToPlayer(event, "You will be automatically connected soon.");
 					tryingToJoinPortalId = upk.objectId;
